@@ -6,7 +6,6 @@ export DISPLAY=:0
 export MUJOCO_GL=egl
 export PYOPENGL_PLATFORM=egl  
 export MUJOCO_EGL_DEVICE_ID=$device_id
-
 export OPENPI_DATA_HOME=./openpi
 export EXP=./logs/$proj_name; 
 export CUDA_VISIBLE_DEVICES=$device_id
