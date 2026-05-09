@@ -11,6 +11,12 @@ export OPENPI_DATA_HOME=./openpi
 export EXP=./logs/$proj_name; 
 export CUDA_VISIBLE_DEVICES=$device_id
 export XLA_PYTHON_CLIENT_PREALLOCATE=false
+export PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+export PYTHONPATH=$PWD:$PWD/LIBERO:$PWD/openpi/src:$PYTHONPATH
+export LIBERO_CONFIG_PATH=$PWD/.libero
+export NUMBA_DISABLE_JIT=1
+export MPLCONFIGDIR=$PWD/.cache/matplotlib
+mkdir -p "$MPLCONFIGDIR"
 
 pip install mujoco==3.3.1
 
