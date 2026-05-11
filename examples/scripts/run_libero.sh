@@ -1,7 +1,7 @@
 #!/bin/bash
 proj_name=DSRL_pi0_Libero
 device_id=0
-#zzz
+#zzzz
 export DISPLAY=:0
 export MUJOCO_GL=egl
 export PYOPENGL_PLATFORM=egl  
