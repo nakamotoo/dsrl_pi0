@@ -1,0 +1,5 @@
+assets: /home/xsuper/dsrl_pi0/LIBERO/libero/libero/assets
+bddl_files: /home/xsuper/dsrl_pi0/LIBERO/libero/libero/bddl_files
+benchmark_root: /home/xsuper/dsrl_pi0/LIBERO/libero/libero
+datasets: /home/xsuper/dsrl_pi0/LIBERO/libero/datasets
+init_states: /home/xsuper/dsrl_pi0/LIBERO/libero/libero/init_files

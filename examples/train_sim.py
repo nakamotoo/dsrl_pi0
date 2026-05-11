@@ -1,9 +1,11 @@
 #! /usr/bin/env python
 import os
-# Tell XLA to use Triton GEMM, this improves steps/sec by ~30% on some GPUs from https://github.com/huggingface/gym-aloha/tree/main?tab=readme-ov-file#-gpu-rendering-egl
-xla_flags = os.environ.get('XLA_FLAGS', '')
-xla_flags += ' --xla_gpu_triton_gemm_any=True'
-os.environ['XLA_FLAGS'] = xla_flags
+# Triton GEMM can improve throughput on some GPUs, but older JAX/XLA builds may
+# crash while compiling half-precision kernels on newer architectures.
+if os.environ.get('DSRL_ENABLE_TRITON_GEMM', '0') == '1':
+    xla_flags = os.environ.get('XLA_FLAGS', '')
+    xla_flags += ' --xla_gpu_triton_gemm_any=True'
+    os.environ['XLA_FLAGS'] = xla_flags
 
 import pathlib, copy
 
